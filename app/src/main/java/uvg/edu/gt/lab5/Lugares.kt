@@ -8,7 +8,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-import androidx.compose.material3.Divider
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.res.painterResource
@@ -37,7 +37,7 @@ fun LugaresApp(modifier: Modifier = Modifier){
 private fun Eventos(nombre: String, descripcion: String, modifier: Modifier = Modifier){
     val perfil = painterResource(R.drawable.perfil)
     val imagen = painterResource(R.drawable.triangulo)
-    Row (modifier = Modifier
+    Row (modifier = modifier
         .fillMaxWidth()
         .padding(vertical = 9.dp), verticalAlignment = Alignment.CenterVertically,) {
         Image (painter = perfil, contentDescription = null, modifier = Modifier.size(50.dp))
@@ -50,7 +50,7 @@ private fun Eventos(nombre: String, descripcion: String, modifier: Modifier = Mo
             .size(34.dp)
             .padding(end = 15.dp))
     }
-    Divider()
+    HorizontalDivider()
 }
 
 @Preview(showBackground = true)
